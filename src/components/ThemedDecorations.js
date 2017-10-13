@@ -12,4 +12,4 @@ class Invitation extends React.Component {
     )
   }
 }
-export default invitation
+export default Invitation
