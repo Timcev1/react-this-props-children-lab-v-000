@@ -1,1 +1,16 @@
 // Code ThemedDecoration Component Here
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class ThemedDecorations extends React.Component{
+  render(){
+    const childProps = React.Children.map(this.props.children, child => React.cloneElement(child, {className: this.props.theme,}));
+    return (
+      <div>
+        {childProps}
+      </div>
+    )
+  }
+}
+
+export default ThemedDecorations;
